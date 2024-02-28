@@ -1,0 +1,149 @@
+html, body {
+  overflow: visible;
+}
+
+body {
+  margin: 0px;
+  padding: 2em;
+}
+
+@media not all and (max-width: 768px) {
+  #vfro-me-content {
+    display: grid;
+    grid-template-columns: fit-content(1em) fit-content(1em) fit-content(1em) 10% fit-content(1em) auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+      "vfro-mailto vfro-mailto vfro-mailto      gap .              .          "
+      "vfro-i      vfro-at     vfro-domain-name gap vfro-name      .          "
+      "vfro-none   vfro-none   vfro-https       gap vfro-architect .          "
+      ".           .           .                gap .              .          "
+      ".           .           .                gap vfro-info      vfro-info  "
+  }
+
+  .vfro-me-domain-part {
+    font-size: 3em;
+  }
+}
+
+@media all and (max-width: 768px) {
+
+  #vfro-me-content {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "vfro-name     "
+      "vfro-architect"
+      "vfro-info     "
+  }
+
+  #vfro-me-name {
+    text-align: center;
+  }
+
+  #vfro-me-mailto, #vfro-me-https, #vfro-me-i, #vfro-me-at, #vfro-me-domain-name {
+    display: none;
+  }
+
+  .vfro-me-domain-part {
+    font-size: 2em;
+  }
+}
+
+.vfro-me-domain-part {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.vfro-me-label {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+  font-style: italic;
+  text-decoration: none;
+  color: #BDBDBD;
+  font-size: 1em;
+}
+
+#vfro-me-mailto {
+  grid-area: vfro-mailto;
+  border-bottom-color: #BDBDBD;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+}
+
+#vfro-me-https {
+  grid-area: vfro-https;
+  border-top-color: #BDBDBD;
+  border-top-style: dashed;
+  border-top-width: 1px;
+}
+
+#vfro-me-i {
+  grid-area: vfro-i;
+}
+
+#vfro-me-i > a {
+  color: #1B5E20;
+}
+
+#vfro-me-at {
+  grid-area: vfro-at;
+}
+
+#vfro-me-domain-name {
+  grid-area: vfro-domain-name;
+}
+
+#vfro-me-name {
+  grid-area: vfro-name;
+  white-space: nowrap;
+}
+
+#vfro-me-architect {
+  grid-area: vfro-architect;
+  white-space: nowrap;
+  text-align: center;
+  margin-top: 0.2em;
+  border-top-color: #BDBDBD;
+  border-top-style: dashed;
+  border-top-width: 1px;
+}
+
+#vfro-me-info {
+  grid-area: vfro-info;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 100;
+  font-style: normal;
+  text-decoration: none;
+  color: #212121;
+}
+
+.vfro-text-a {
+  text-decoration: underline;
+  color: #757575;
+}
+
+.vfro-me-domain-highlight {
+  color: #1A237E;
+}
+
+.vfro-me-domain-belite {
+  color: #212121;
+}
+
+p {
+  margin-top: 2em;
+  margin-bottom: 0em;
+}
+
+ul {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+li {
+  padding-top: 0.2em;
+}
